@@ -152,7 +152,7 @@ gulp.task('serve', ['styles', 'scripts'], () => {
 });
 
 
-gulp.task('serve:dist', () => {
+gulp.task('serve:dist', ['default'], () => {
   browserSync.init({
     server: {
       baseDir: ['dist'],
