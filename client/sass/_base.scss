@@ -73,6 +73,10 @@ figure {
     width: 100%;
   }
 }
+figcaption{
+   color:$cite-color;
+   text-align:left;
+}
 
 body {
   background-color: $bodyBackColor;
