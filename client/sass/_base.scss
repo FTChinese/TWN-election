@@ -22,7 +22,7 @@ ul, ol {
   list-style: none;
 }
 a {
-  color: darken($linkColor, 50%);
+  color: $linkColor;
   text-decoration: none;
   &:hover {
     color: $linkHover;
