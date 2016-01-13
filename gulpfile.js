@@ -152,7 +152,7 @@ gulp.task('serve', ['styles', 'scripts'], () => {
 });
 
 
-gulp.task('serve:dist', ['default'], () => {
+gulp.task('serve:dist', () => {
   browserSync.init({
     server: {
       baseDir: ['dist'],
@@ -163,9 +163,9 @@ gulp.task('serve:dist', ['default'], () => {
   });
 });
 
-gulp.task('html', () => {
+gulp.task('html', function() {
   return gulp.src(config.src.html)
-    .pipe($.useref({searchPath: ['.tmp', 'client', '.']}))
+    .pipe($.useref({searchPath: ['.tmp', 'client']}))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano()))
     .pipe($.if('*.html', $.smoosher({
