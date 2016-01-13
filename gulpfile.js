@@ -155,17 +155,14 @@ gulp.task('serve', ['styles', 'scripts'], () => {
 gulp.task('serve:dist', () => {
   browserSync.init({
     server: {
-      baseDir: ['dist'],
-      routes: {
-        '/bower_components': 'bower_components'
-      }
+      baseDir: ['dist']
     }
   });
 });
 
 gulp.task('html', function() {
   return gulp.src(config.src.html)
-    .pipe($.useref({searchPath: ['.tmp', 'client']}))
+    .pipe($.useref({searchPath: ['.', '.tmp', 'client']}))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano()))
     .pipe($.if('*.html', $.smoosher({
@@ -234,4 +231,4 @@ gulp.task('html:deploy', function() {
 });
 
 
-gulp.task('deploy', $.sequence('clean', 'build', ['assets:deploy', 'html:deploy']));
+gulp.task('deploy', $.sequence('clean', 'build', 'html', ['assets:deploy', 'html:deploy']));
