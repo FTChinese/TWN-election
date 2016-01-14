@@ -1,6 +1,5 @@
 'use strict'
 var oShare = require('ftc-share');
-var visual = require('./scripts/visual.js');
 oShare.buildAll();
 
 $(function() {

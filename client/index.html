@@ -24,8 +24,6 @@
     <!-- build:css styles/bundle.min.css -->
     <link rel="stylesheet" type="text/css" href="bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
-    <link rel="stylesheet" type="text/css" href="styles/backgrounds.css">
-    <link rel="stylesheet" type="text/css" href="styles/custom.css">
     <!-- endbuild -->
     <!-- smoosh -->
     <!-- build:js scripts/ga.js -->
@@ -50,7 +48,7 @@
               <a class="series-title" href="#">台湾大选2016</a>
           </h1>
         </div>
-        <div class="o-share" data-o-component="o-share"></div>
+        <div class="o-share" data-o-component="o-share" data-o-share-links="wechat weibo linkedin facebook"></div>
         <div class="small-menu"></div>
     </header>
     <nav class="nav__toc hide-on-small" role="navigation"></nav>
@@ -257,16 +255,22 @@
     <!-- build:staticjs -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <!-- endbuild -->
-    <!-- Put highcharts.js link here -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js">
-    </script>
+
+
 
     <!-- build:js scripts/bundle.min.js -->
     <script src="bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
     <script src="scripts/bundle.js"></script>
     <!-- endbuild -->
-    
+
+    <!-- Put highcharts.js link here -->
+    <script src="http://interactive.ftchinese.com/bower_components/highcharts/highcharts.js"></script>
+    <script src="http://interactive.ftchinese.com/bower_components/highcharts/modules/exporting.js"></script>
+
+    <!-- build:js scripts/visual.min.js -->
+    <script src="scripts/visual.js"></script>
+    <!-- endbuild -->
+
     <!-- build:log -->
     <script src=""></script>
     <!-- endbuild -->

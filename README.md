@@ -7,7 +7,9 @@ editorial project, scheduled to be published on Jan 2016.
 
 Run `gulp serve` for development.
 
-Run `gulp` to build the final files for distribution.
+Run `gulp build` to build the final files for distribution.
+
+After run `gulp build`, you can run `gulp serve:dist` to preview the build results.
 
 Run `gulp deploy` for production.
 
