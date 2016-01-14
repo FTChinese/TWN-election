@@ -1,15 +1,15 @@
 .story-cover {
-	background-image: url("/images/fb-share.jpg");
+	background-image: url("http://i.ftimg.net/picture/3/000057903_piclink.jpg");
 	}
 
 .section-2 
 	.section-cover {
-	background-image: url("http://i.ftimg.net/picture/0/000057900_piclink.jpg");
+	background-image: url("http://i.ftimg.net/picture/1/000057901_piclink.jpg");
 	}
 
 .section-3 
 	.section-cover {
-	background-image: url("https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fi.ftimg.net%2Fpicture%2F6%2F000057836_piclink.jpg?source=test&quality=highest");}
+	background-image: url("https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fi.ftimg.net%2Fpicture%2F6%2F000057836_piclink.jpg?source=FTChinese&quality=highest");}
 
 
 .story-footer {
@@ -22,7 +22,7 @@
 // Background image shown on 
 @media only screen and (max-width: 768px) {
 	.story-cover {
-		background-image: url("/images/fb-share.jpg");
+		background-image: url("http://i.ftimg.net/picture/4/000057904_piclink.jpg");
 		}
 
 	.section-2 
@@ -32,7 +32,7 @@
 
 	.section-3 
 		.section-cover {
-		background-image: url("https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fi.ftimg.net%2Fpicture%2F6%2F000057836_piclink.jpg?width=736&quality=medium&source=ftchinese");}
+		background-image: url("https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fi.ftimg.net%2Fpicture%2F6%2F000057836_piclink.jpg?source=FTChinese&quality=highest");}
 
 
 	.story-footer {
@@ -45,17 +45,17 @@
 
 @media only screen and (max-width: 736px) {
 	.story-cover {
-		background-image: url("/images/fb-share.jpg")
+		background-image: url("http://i.ftimg.net/picture/4/000057904_piclink.jpg")
 		}
 
 	.section-2 
 		.section-cover {
-			background-image: url("http://i.ftimg.net/picture/0/000057900_piclink.jpg");
+			background-image: url("http://i.ftimg.net/picture/2/000057902_piclink.jpg");
 		}
 
 	.section-3 
 		.section-cover {
-			background-image: url("https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fi.ftimg.net%2Fpicture%2F6%2F000057836_piclink.jpg?source=test&quality=lowest");}
+			background-image: url("https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fi.ftimg.net%2Fpicture%2F6%2F000057836_piclink.jpg?source=FTChinese&quality=highest");}
 
 
 	.story-footer {
