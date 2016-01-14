@@ -18,10 +18,10 @@
       margin: 0 auto;
   }
 
-  @include background-setting(fixed);
-  &::before {
+  @include background-setting/*(fixed)*/;
+  /*&::before {
     @include background-overlay;
-  }
+  }*/
 }
 .text-wrapper {
     max-width: 600px;
