@@ -87,29 +87,17 @@ gulp.task('js', function() {
     transform: [debowerify, babelify]
   });
 
-  b.on('update', bundle);
-  b.on('log', $.util.log);
-
-  bundle();
-
-  function bundle(ids) {
-    $.util.log('Compiling JS...');
-    if (ids) {
-      console.log('Chnaged Files:\n' + ids);
-    }   
-    return b.bundle()
-      .on('error', function(err) {
-        $.util.log(err.message);
-        browserSync.notify('Browerify Error!')
-        this.emit('end')
-      })
-      .pipe(source('bundle.js'))
-      .pipe(buffer())
-      .pipe($.sourcemaps.init({loadMaps: true}))
-      .pipe($.sourcemaps.write('./'))
-      .pipe(gulp.dest('.tmp/scripts'))
-      .pipe(browserSync.stream({once:true}));
-  }
+  return b.bundle()
+    .on('error', function(err) {
+      $.util.log(err.message);
+      browserSync.notify('Browerify Error!')
+      this.emit('end')
+    })
+    .pipe(source('bundle.js'))
+    .pipe(buffer())
+    .pipe($.sourcemaps.init({loadMaps: true}))
+    .pipe($.sourcemaps.write('./'))
+    .pipe(gulp.dest('.tmp/scripts'));
 });
 
 function lint(files, options) {
@@ -130,7 +118,7 @@ const testLintOptions = {
 gulp.task('lint', lint('client/scripts/**/*.js'));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
-gulp.task('serve', ['styles', 'scripts'], () => {
+gulp.task('serve', ['styles', 'scripts'], function () {
   browserSync.init({
     server: {
       baseDir: ['.tmp', 'client'],
@@ -160,7 +148,7 @@ gulp.task('serve:dist', () => {
   });
 });
 
-gulp.task('html', function() {
+gulp.task('html', ['styles', 'js'], function() {
   return gulp.src(config.src.html)
     .pipe($.useref({searchPath: ['.', '.tmp', 'client']}))
     .pipe($.if('*.js', $.uglify()))
@@ -172,7 +160,7 @@ gulp.task('html', function() {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('extras', () => {
+gulp.task('extras', function () {
   return gulp.src([
     'client/*.*',
     '!client/*.html'
@@ -181,7 +169,7 @@ gulp.task('extras', () => {
   }).pipe(gulp.dest('dist'));
 });
 
-gulp.task('images', () => {
+gulp.task('images', function () {
   return gulp.src(config.src.images)
     .pipe($.imagemin({
       progressive: true,
@@ -197,11 +185,7 @@ gulp.task('clean', function() {
   });
 });
 
-gulp.task('build', ['lint', 'styles', 'js', 'images'], () => {
-  return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
-});
-
-gulp.task('default', $.sequence('clean', 'build', 'html'));
+gulp.task('build', $.sequence('clean', ['html', 'images']));
 
 //Go test server
 gulp.task('copy:test', function() {
@@ -231,4 +215,4 @@ gulp.task('html:deploy', function() {
 });
 
 
-gulp.task('deploy', $.sequence('clean', 'build', 'html', ['assets:deploy', 'html:deploy']));
+gulp.task('deploy', $.sequence('clean', 'build', ['assets:deploy', 'html:deploy']));
