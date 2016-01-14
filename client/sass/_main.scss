@@ -18,9 +18,9 @@
       margin: 0 auto;
   }
 
-  @include background-setting(fixed);
+  @include background-setting(fixed);/*
   &::before {
-    @include background-overlay;
+   // @include background-overlay;
   }
 }
 .text-wrapper {
