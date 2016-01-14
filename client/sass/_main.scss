@@ -19,9 +19,9 @@
   }
 
   @include background-setting/*(fixed)*/;
-  /*&::before {
+  &::before {
     @include background-overlay;
-  }*/
+  }
 }
 .text-wrapper {
     max-width: 600px;
