@@ -1,6 +1,5 @@
 'use strict'
 var oShare = require('ftc-share');
-oShare.buildAll();
 
 $(function() {
 
@@ -11,6 +10,7 @@ var headerHeight = $('.header').height();
 var viewportHeight = $(window).height() - headerHeight;
 var $tocNav = $('.nav__toc').eq(0);
 
+setHeight($('.text-over-media'), viewportHeight);
 //Get the image source of `.story-cover` and put it as the background of `.story-header` so that the picture could flow with resizing while `wechat` could capture this image as thumbnail.
 $('.story-cover').css('background-image', function() {
 	return 'url(' + $('.cover-image').attr('src') + ')';
@@ -18,7 +18,7 @@ $('.story-cover').css('background-image', function() {
 
 /* Show/Hide Navigation */
 showHideNav($('.small-menu'), $('.nav__toc'));
-setHeight($('.text-over-media'), viewportHeight);
+
 backToTop($('.to-top'));
 
 /* Generate navigation and deal with scrolled pagination */
@@ -122,3 +122,5 @@ function showHideNav($elm, $navContainer) {
 		e.stopPropagation();
 	});
 }
+
+oShare.buildAll();
