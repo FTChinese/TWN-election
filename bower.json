@@ -5,8 +5,8 @@
     "jquery": "~2.1.4",
     "jquery.scrollTo": "~2.1.2",
     "normalize-css": "normalize.css#~3.0.3",
-    "ftc-share": "~0.1.4",
-    "ftc-icons": "~1.0.4",
+    "ftc-share": "~0.1.5",
+    "ftc-icons": "~1.1.0",
     "highcharts": "~4.2.1"
   }
 }
