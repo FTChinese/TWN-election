@@ -30,7 +30,11 @@ gulp.task('styles', function () {
       includePaths: ['bower_components', bourbon]
     }).on('error', $.sass.logError))
     .pipe($.postcss([
-      cssnext(),
+      cssnext({
+        features: {
+          colorRgba: false
+        }
+      }),
       inlineSvg({
         path: 'bower_components/ftc-icons/build',
         transform: function(data, path, opts) {
