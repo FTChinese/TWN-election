@@ -1,5 +1,5 @@
 .story-cover {
-		background-image: url("https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fi.ftimg.net%2Fpicture%2F8%2F000057838_piclink.jpg?source=test&quality=high");
+		background-image: url("https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fi.ftimg.net%2Fpicture%2F8%2F000057838_piclink.jpg?quality=high&source=ftchinese");
 	}
 
 .section-2 
@@ -22,7 +22,7 @@
 // Background image shown on 
 @media only screen and (max-width: 768px) {
 	.story-cover {
-			background-image: url("https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fi.ftimg.net%2Fpicture%2F8%2F000057838_piclink.jpg?source=test&quality=medium");
+			background-image: url("https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fi.ftimg.net%2Fpicture%2F8%2F000057838_piclink.jpg?width=768&quality=medium&source=ftchinese");
 		}
 
 	.section-2 
@@ -32,7 +32,7 @@
 
 	.section-3 
 		.section-cover {
-			background-image: url("https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fi.ftimg.net%2Fpicture%2F6%2F000057836_piclink.jpg?source=test&quality=medium");}
+			background-image: url("https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fi.ftimg.net%2Fpicture%2F6%2F000057836_piclink.jpg?width=736&quality=medium&source=ftchinese");}
 
 
 	.story-footer {
@@ -45,7 +45,7 @@
 
 @media only screen and (max-width: 736px) {
 	.story-cover {
-			background-image: url("https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fi.ftimg.net%2Fpicture%2F8%2F000057838_piclink.jpg?source=test&quality=lowest");
+			background-image: url("https://image.webservices.ft.com/v1/images/raw/http%3A%2F%2Fi.ftimg.net%2Fpicture%2F8%2F000057838_piclink.jpg?width=736&quality=lowest&source=ftchinese");
 		}
 
 	.section-2 
